@@ -21,5 +21,9 @@ namespace Xadrez.tabuleiro
             this.qteMovimentos = 0;
         }
 
+        public void incrementarQteMovimento()
+        {
+            this.qteMovimentos++;
+        }
     }
 }
