@@ -11,10 +11,10 @@ namespace Xadrez
     {
         static void Main(string[] args)
         {
-            Posicao p = new Posicao(3,4);
+            
             Tabuleiro t = new Tabuleiro(8,8);
+            Tela.imprimirTabuleiro(t);
 
-            Console.WriteLine($"Posição = {p}");
             Console.ReadKey();
 
         }
