@@ -46,7 +46,12 @@ namespace Xadrez.tabuleiro
         }
         public void incrementarQteMovimento()
         {
-            this.qteMovimentos++;
+            qteMovimentos++;
+        }
+
+        public void decrementarQteMovimentos()
+        {
+            qteMovimentos--;
         }
     }
 }

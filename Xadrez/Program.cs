@@ -50,10 +50,13 @@ namespace Xadrez
                         Console.WriteLine(e.Message);
                         Console.ReadKey();
                     }
+                    
 
                 }
 
-                Tela.imprimirTabuleiro(partida.tab);
+                
+                Console.Clear();
+                Tela.imprimirPartida(partida);
 
             }
             catch(TabuleiroException e)
