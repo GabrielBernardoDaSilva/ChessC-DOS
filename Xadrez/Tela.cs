@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xadrez.tabuleiro;
+using Xadrez.tabuleiro.exception;
 using Xadrez.xadrez;
 
 namespace Xadrez
@@ -127,6 +128,8 @@ namespace Xadrez
         public static PosicaoXadrez lerPosicaoXadrez()
         {
             string s = Console.ReadLine();
+            if (s.Length != 2)
+                throw new TabuleiroException("Valor invalido");
             char coluna = s[0];
             int linha = int.Parse(s[1] + "");
             return new PosicaoXadrez(coluna, linha);

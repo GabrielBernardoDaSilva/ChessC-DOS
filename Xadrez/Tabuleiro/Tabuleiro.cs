@@ -28,6 +28,8 @@ namespace Xadrez.tabuleiro
 
         public Peca peca(Posicao pos)
         {
+            if (pos.linha > linhas || pos.coluna > colunas)
+                throw new TabuleiroException("Posição invalida");
             return pecas[pos.linha, pos.coluna];
         }
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xadrez.tabuleiro.exception;
 
 namespace Xadrez.tabuleiro
 {
@@ -42,6 +43,8 @@ namespace Xadrez.tabuleiro
 
         public bool movimentoPossivel(Posicao pos)
         {
+            if (pos.linha > tab.linhas || pos.coluna > tab.colunas)
+                throw new TabuleiroException("Posição invalida");
             return movimentosPossiveis()[pos.linha, pos.coluna];
         }
         public void incrementarQteMovimento()
